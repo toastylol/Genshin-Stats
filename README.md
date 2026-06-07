@@ -1,7 +1,9 @@
 # genshin stats!
 a discord widget for your genshin stats!
 
-<img width="343" height="252" alt="image" src="https://github.com/user-attachments/assets/8ea12c16-d95c-4e18-ae11-58e2f7c7ba3f" />
+<img width="360" height="171" alt="widget addition" src="https://github.com/user-attachments/assets/6e166b62-ca79-49c0-900d-912639d0b57f" />
+<img width="352" height="251" alt="main widget" src="https://github.com/user-attachments/assets/f7cc013b-62d2-4ece-97fd-b227ed40e062" />
+<img width="227" height="80" alt="mini view" src="https://github.com/user-attachments/assets/efdbea80-00a1-4ff6-8e58-343f7e717e4b" />
 
 special thanks to @chloecinders, @aamia, @bignutty and @.dziurwa and the rest of the smart people at [discord previews](https://discord.gg/discord-603970300668805120) for getting out the first info on these.
 # how to use?
