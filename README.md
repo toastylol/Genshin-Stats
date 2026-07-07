@@ -1,5 +1,5 @@
 # genshin stats!
-a discord widget for your genshin stats!
+a discord widget for your genshin stats using [enka](https://enka.network/)!
 
 <div align="center">
 <img width="359" height="230" alt="widget addition" src="https://github.com/user-attachments/assets/829b0a59-67a9-4b7b-91c3-7f21e3d805ca" />
