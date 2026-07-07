@@ -27,4 +27,4 @@ special thanks to @chloecinders, @aamia, @bignutty and @.dziurwa and the rest of
 ----
 if you wish to update your stats, just run the program again.
 
-alternatively, you can use [windows task scheduler](https://www.technipages.com/scheduled-task-windows/) or [systemd](https://linuxhandbook.com/courses/systemd-automation/) on linux or [use launchd](https://blog.serghei.pl/posts/scheduling-recurring-tasks-on-macos-using-launchd/) on macos to automate the process!
+alternatively, you can use [windows task scheduler](https://www.technipages.com/scheduled-task-windows/) or [systemd](https://www.funwithlinux.net/systemd-service-management/streamline-your-workflow-with-systemd-s-automation-features/) on linux or [use launchd](https://blog.serghei.pl/posts/scheduling-recurring-tasks-on-macos-using-launchd/) on macos to automate the process!
