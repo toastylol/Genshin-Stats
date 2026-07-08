@@ -8,9 +8,35 @@ const DISCORD_USER_ID = process.env.DISCORD_USER_ID;
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN; 
 
 async function syncGenshinStats() {
+    let enkaResponse;
+
     try {
-        const enkaResponse = await axios.get(ENKA_URL);
+        enkaResponse = await axios.get(ENKA_URL);
         
+        const name = enkaResponse.data.playerInfo?.nickname;
+        console.log(`Fetched Genshin stats for ${name} (UID: ${process.env.GENSHIN_UID}). Status: ${enkaResponse.status}`);
+
+    } catch (error) {
+        if (error.response) {
+            const status = error.response.status;
+            const reasons = {
+                400: "Invalid UID!",
+                404: "UID not found!",
+                424: "Game server is down or under maintenance!",
+                429: "Rate Limited!",
+                500: "Internal Server Error!",
+                503: "Internal Server Error!",
+            }
+
+            const reason = reasons[status] || "Unknown Error!";
+            console.error(`Failed to fetch Enka profile. Status: ${status} (${reason})`);
+        } else {
+            console.error(`Failed to reach Enka Network. Error: ${error.message}`);
+        }
+
+        process.exit(1);
+    }    
+    try {        
         const player = enkaResponse.data.playerInfo;
         const region = enkaResponse.data.region; 
 
@@ -47,13 +73,14 @@ async function syncGenshinStats() {
             }
         });
 
-        console.log(`Successfully synced Genshin widget for ${player.nickname}. Status: ${response.status}`);
+        console.log(`Successfully synced Genshin widget for ${player.nickname} (${process.env.DISCORD_USER_ID}). Status: ${response.status}`);
 
     } catch (error) {
         if (error.response) {
             console.error("Discord API Error:", error.response.status, error.response.data);
         } else {
             console.error("Request Error:", error.message);
+            console.error(error.response?.data);
         }
     }
 }
