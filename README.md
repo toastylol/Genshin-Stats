@@ -23,10 +23,15 @@ special thanks to @chloecinders, @aamia, @bignutty and @.dziurwa and the rest of
 | :---: | :---: |
 | <img width="1047" height="259" alt="image" src="https://github.com/user-attachments/assets/42cb5ad3-3088-4461-8f1f-5b34986a31a1" /> | <img width="1046" height="263" alt="image" src="https://github.com/user-attachments/assets/2738e778-bf8d-4677-bde7-e6bf0e81a19a" /> |
 
-- 2. clone this repo and create a .env file with your `GENSHIN_UID`, `DISCORD_BOT_TOKEN`, `DISCORD_USER_ID` and `DISCORD_CLIENT_ID`
+- 2. clone this repo and create a .env file the provided `.env.example` template
 - 3. run `node enkaUser.js` to sync your genshin stats to discord thru [enka](https://enka.network/).
 - 4. use a snippet from [discord previews server (linked above)](https://discord.com/channels/603970300668805120/1509942620762276011) to add it to your profile!
 ----
 if you wish to update your stats, just run the program again.
 
 alternatively, you can use [windows task scheduler](https://www.technipages.com/scheduled-task-windows/) or [systemd](https://www.funwithlinux.net/systemd-service-management/streamline-your-workflow-with-systemd-s-automation-features/) on linux or [use launchd](https://blog.serghei.pl/posts/scheduling-recurring-tasks-on-macos-using-launchd/) on macos to automate the process!
+
+if you are on mac, you can use the included `com.stelle.genshin-stats.plist` file to automate updates!. 
+
+copy it to `/Users/your user name/Library/LaunchAgents` then run `launchctl load /Users/your user name/Library/LaunchAgents/com.stelle.genshin-stats.plist` for your stats to be automatically updated every day at midnight!
+> note that discord's widget update rate limit is 3 requests/20s. exceeding this will result in your requests being blocked / ip being temp-banned!
