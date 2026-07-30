@@ -3,6 +3,8 @@ a discord widget for your genshin stats using [enka](https://enka.network/)!
 
 please star the repo if you like it :p it motivates me to make more stuff like this
 
+# as of 28th jul 2026, it is [no longer possible](https://support-dev.discord.com/hc/en-us/articles/42261641635351-Game-Stats-Widget-Experiment) to create custom widgets!
+
 <div align="center">
 <img width="359" height="230" alt="widget addition" src="https://github.com/user-attachments/assets/829b0a59-67a9-4b7b-91c3-7f21e3d805ca" />
 <img width="352" height="251" alt="main widget" src="https://github.com/user-attachments/assets/f7cc013b-62d2-4ece-97fd-b227ed40e062" />
